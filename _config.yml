@@ -1,4 +1,7 @@
 #other settings can be found at jekyllrb.com/docs/configuration
 
+exclude: [README.md, TODO.md, LICENSE, node_modules, Makefile, Gulpfile.js, package.json, npm-debug.log]
+
+
 author:
     name: Matthias von Steimker
