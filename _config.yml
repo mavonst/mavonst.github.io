@@ -1,7 +1,15 @@
 #other settings can be found at jekyllrb.com/docs/configuration
+timezone: Europe/Berlin
 
 exclude: [README.md, TODO.md, LICENSE, node_modules, Makefile, Gulpfile.js, package.json, npm-debug.log]
 
 
+#own settings
+name: mavonst
+domain: mavonst.github.io
+url: https://mavonst.github.io
+description: Portfolio website of Matthias von Steimker
+copyright: 2014
 author:
     name: Matthias von Steimker
+    github_link: https://github.com/mavonst

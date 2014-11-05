@@ -1,12 +1,12 @@
 {
-  "name": "minddust",
+  "name": "mavonst",
   "version": "0.5.0",
-  "author": "Stephan Groß",
-  "homepage": "http://www.minddust.com",
+  "author": "Matthias von Steimker",
+  "homepage": "https://mavonst.github.io/",
   "private": true,
   "repository": {
     "type": "git",
-    "url": "git://github.com/minddust/minddust.github.io.git"
+    "url": "git://github.com/mavonst/mavonst.github.io.git"
   },
   "scripts": {
     "gulp": "./node_modules/.bin/gulp"
