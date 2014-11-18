@@ -1,7 +1,7 @@
 #other settings can be found at jekyllrb.com/docs/configuration
 timezone: Europe/Berlin
 
-exclude: [README.md, TODO.md, LICENSE, node_modules, Makefile, Gulpfile.js, package.json, npm-debug.log]
+exclude: [README.md, TODO.md, LICENSE, node_modules, Makefile, Gulpfile.js, package.json, npm-debug.log, mavonst.github.io.sublime-project, mavonst.github.io.sublime-workspace]
 
 
 #own settings

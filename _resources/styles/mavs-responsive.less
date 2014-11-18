@@ -1,0 +1,40 @@
+/* Extra small devices (phones, up to 480px) */
+/* No media query since this is the default in Bootstrap */
+
+/* Lastly, apply responsive CSS fixes as necessary */
+@media (max-width: 767px) {
+}
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: @screen-tablet) {
+  header {
+    margin-bottom: 15px;
+    text-align: inherit;
+  }
+
+  .container {
+    max-width: 730px;
+  }
+
+  article article {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+}
+
+/* Medium devices (tablets, 992px and up) */
+@media (min-width: @screen-desktop) {
+}
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: @screen-lg-desktop) {
+}
+
+/* 1.5 dpr */
+@media (-webkit-min-device-pixel-ratio: 1.5),
+(min-resolution: 144dpi) {
+  #portrait-jnk {
+    background-image: url(../img/portrait-mavs.jpg);
+    background-size: 150px 150px;
+  }
+}
