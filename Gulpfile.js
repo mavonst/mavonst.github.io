@@ -8,6 +8,9 @@ var less = require('gulp-less');
 var rename = require('gulp-rename');
 var uglify = require('gulp-uglify');
 var minifyCss = require('gulp-minify-css');
+var imagemin = require('gulp-imagemin'); //imagemin
+var jpegtran = require('imagemin-jpegtran'); //imagemin
+var optipng = require('imagemin-optipng');  //imagemin
 
 var pkg = require('./package.json');
 var currentYear = util.date(new Date(), 'yyyy');
@@ -29,7 +32,11 @@ var paths = {
     statics: [
         './_resources/statics/**/*'
     ],
-    build: './res'
+    images: [
+        './_resources/img/**/*'
+    ],
+    build: './res',
+    buildImg: './res/img'
 };
 
 var bannerScriptsCommon = [
@@ -79,6 +86,23 @@ gulp.task('statics', function() {
         .pipe(gulp.dest(paths.build))
 });
 
+gulp.task('imageMin-JPG', function() {
+    return gulp.src(paths.images + '*.jpg')
+        .pipe(imagemin({
+            progressive: true,
+            use: [jpegtran()]
+        }))
+        .pipe(gulp.dest(paths.buildImg))
+});
+
+gulp.task('imageMin-PNG', function() {
+    return gulp.src(paths.images + '*.png')
+        .pipe(optipng({ optimizationLevel: 3 })())
+        .pipe(gulp.dest(paths.buildImg))
+});
+
+gulp.task('imageMin', ['imageMin-JPG', 'imageMin-PNG']);
+
 gulp.task('clean', function() {
     return gulp.src('./res', {read: false})
         .pipe(clean());
@@ -89,4 +113,4 @@ gulp.task('watch', function() {
     gulp.watch(paths.styles, ['styles']);
 });
 
-gulp.task('default', ['scripts', 'styles', 'statics']);
+gulp.task('default', ['scripts', 'styles', 'statics', 'imageMin']);
