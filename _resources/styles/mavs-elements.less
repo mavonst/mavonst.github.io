@@ -1,13 +1,33 @@
 /* From bootstraps sample */
 /* Space out content a bit */
-body {
+html, body {
   padding-top: 20px;
   padding-bottom: 20px;
+  height: 100%;
+  .font-smoothing(antialiased);
 }
 
 header {
   margin-bottom: 15px;
   text-align: center;
+}
+
+#site {
+  position: relative;
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  margin: 0 auto -@footer-height;
+  border-top: 5px solid @color-darkblue;
+}
+
+#content {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+#push {
+  height: @footer-height;
 }
 
 footer {
